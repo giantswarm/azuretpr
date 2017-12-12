@@ -130,7 +130,6 @@ func TestSpecYamlEncoding(t *testing.T) {
 			Masters: []azure.Node{
 				{
 					VMSize:          "Standard_A1",
-					DataDiskSizeGB:  50,
 					AdminUsername:   "core",
 					AdminSSHKeyData: "ssh-rsa AAAAB3NzaC1y",
 					OSImage: node.OSImage{
@@ -139,12 +138,31 @@ func TestSpecYamlEncoding(t *testing.T) {
 						SKU:       "Stable",
 						Version:   "1465.7.0",
 					},
+					OSDisk: node.Disk{
+						Name:               "OSDisk",
+						Caching:            "ReadWrite",
+						SizeGB:             30,
+						StorageAccountType: "Standard_LRS",
+					},
+					DataDisks: []node.Disk{
+						{
+							Name:               "EtcdDisk",
+							Caching:            "ReadWrite",
+							SizeGB:             10,
+							StorageAccountType: "Premium_LRS",
+						},
+						{
+							Name:               "DockerDisk",
+							Caching:            "ReadWrite",
+							SizeGB:             30,
+							StorageAccountType: "Premium_LRS",
+						},
+					},
 				},
 			},
 			Workers: []azure.Node{
 				{
 					VMSize:          "Standard_A1",
-					DataDiskSizeGB:  50,
 					AdminUsername:   "core",
 					AdminSSHKeyData: "ssh-rsa AAAAB3NzaC1y",
 					OSImage: node.OSImage{
@@ -152,6 +170,20 @@ func TestSpecYamlEncoding(t *testing.T) {
 						Offer:     "CoreOS",
 						SKU:       "Stable",
 						Version:   "1465.7.0",
+					},
+					OSDisk: node.Disk{
+						Name:               "OSDisk",
+						Caching:            "ReadWrite",
+						SizeGB:             30,
+						StorageAccountType: "Standard_LRS",
+					},
+					DataDisks: []node.Disk{
+						{
+							Name:               "DockerDisk",
+							Caching:            "ReadWrite",
+							SizeGB:             50,
+							StorageAccountType: "Premium_LRS",
+						},
 					},
 				},
 			},
