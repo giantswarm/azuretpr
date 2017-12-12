@@ -187,9 +187,6 @@ func TestSpecYamlEncoding(t *testing.T) {
 					},
 				},
 			},
-			Storage: azure.Storage{
-				AccountType: "Standard_LRS",
-			},
 			VirtualNetwork: azure.VirtualNetwork{
 				CIDR:             "10.0.0.0/16",
 				MasterSubnetCIDR: "10.0.1.0/24",
