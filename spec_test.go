@@ -141,7 +141,6 @@ func TestSpecYamlEncoding(t *testing.T) {
 					OSDisk: node.Disk{
 						Name:               "OSDisk",
 						Caching:            "ReadWrite",
-						SizeGB:             30,
 						StorageAccountType: "Standard_LRS",
 					},
 					DataDisks: []node.Disk{
@@ -174,7 +173,6 @@ func TestSpecYamlEncoding(t *testing.T) {
 					OSDisk: node.Disk{
 						Name:               "OSDisk",
 						Caching:            "ReadWrite",
-						SizeGB:             30,
 						StorageAccountType: "Standard_LRS",
 					},
 					DataDisks: []node.Disk{

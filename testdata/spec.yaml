@@ -79,7 +79,7 @@ azure:
     osDisk:
       name: OSDisk
       caching: ReadWrite
-      sizeGB: 30
+      sizeGB: 0
       storageAccountType: Standard_LRS
     dataDisks:
     - name: EtcdDisk
@@ -102,7 +102,7 @@ azure:
     osDisk:
       name: OSDisk
       caching: ReadWrite
-      sizeGB: 30
+      sizeGB: 0
       storageAccountType: Standard_LRS
     dataDisks:
     - name: DockerDisk
