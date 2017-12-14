@@ -138,25 +138,6 @@ func TestSpecYamlEncoding(t *testing.T) {
 						SKU:       "Stable",
 						Version:   "1465.7.0",
 					},
-					OSDisk: node.Disk{
-						Name:               "OSDisk",
-						Caching:            "ReadWrite",
-						StorageAccountType: "Standard_LRS",
-					},
-					DataDisks: []node.Disk{
-						{
-							Name:               "EtcdDisk",
-							Caching:            "ReadWrite",
-							SizeGB:             10,
-							StorageAccountType: "Premium_LRS",
-						},
-						{
-							Name:               "DockerDisk",
-							Caching:            "ReadWrite",
-							SizeGB:             30,
-							StorageAccountType: "Premium_LRS",
-						},
-					},
 				},
 			},
 			Workers: []azure.Node{
@@ -169,19 +150,6 @@ func TestSpecYamlEncoding(t *testing.T) {
 						Offer:     "CoreOS",
 						SKU:       "Stable",
 						Version:   "1465.7.0",
-					},
-					OSDisk: node.Disk{
-						Name:               "OSDisk",
-						Caching:            "ReadWrite",
-						StorageAccountType: "Standard_LRS",
-					},
-					DataDisks: []node.Disk{
-						{
-							Name:               "DockerDisk",
-							Caching:            "ReadWrite",
-							SizeGB:             50,
-							StorageAccountType: "Premium_LRS",
-						},
 					},
 				},
 			},
