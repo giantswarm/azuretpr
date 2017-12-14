@@ -11,8 +11,4 @@ type Node struct {
 	AdminSSHKeyData string `json:"adminSSHKeyData" yaml:"adminSSHKeyData"`
 	// OSImage is the vm OS image object
 	OSImage node.OSImage `json:"osImage" yaml:"osImage"`
-	// OSDisk is the vm OS disk object
-	OSDisk node.Disk `json:"osDisk" yaml:"osDisk"`
-	// DataDisks is an array of the vm data disks
-	DataDisks []node.Disk `json:"dataDisks" yaml:"dataDisks"`
 }
