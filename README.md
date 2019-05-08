@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/giantswarm/azuretpr.svg?style=svg)](https://circleci.com/gh/giantswarm/azuretpr)
+[![CircleCI](https://circleci.com/gh/giantswarm/azuretpr.svg?style=shield)](https://circleci.com/gh/giantswarm/azuretpr)
 
 # azuretpr
 
